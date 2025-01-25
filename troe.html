@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tröe - Unbiased AI Evaluation</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .pricing-table {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .header {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .nav-links {
+            list-style: none;
+            padding: 0;
+        }
+        .nav-links li {
+            margin-bottom: 0.5rem;
+        }
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 2rem 0;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.25rem;
+        }
+        .footer {
+            border-top: 1px solid #ddd;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <img src="assets/troe_logo.svg" alt="tröe logo" width="150">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="button">Submit Job</button>
+            </nav>
+        </header>
+
+        <!-- Hero -->
+        <h1>Unbiased AI Evaluation for a Transparent World</h1>
+        <p>tröe provides independent performance data on AI systems, helping you make informed decisions and build trust.</p>
+        <button class="button">Learn More</button>
+
+        <!-- About -->
+        <section id="about">
+            <h2>About tröe</h2>
+            <div class="grid-2">
+                <div>
+                    <p>tröe is a non-profit, open-source platform dedicated to providing unbiased, multi-perspective answers to complex questions. We are a community of engineers, researchers, and volunteers working together to create a more transparent and democratic approach to accessing knowledge.</p>
+                    <p>tröe conducts tests and provides metrics to inform decision making regarding the diversity of AI systems. As a not for profit, the organization is intended to be a clearing house of open and transparent information, tools, and process for use in AI engineering. We encourage feedback and We believe in the power of open-source AI and community-driven efforts to make technology more reliable and trustworthy.</p>
+                </div>
+                <img src="assets/about_image.jpg" alt="About tröe">
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>tröe offers a suite of services designed to evaluate and benchmark AI systems, with a focus on content moderation as a primary use case.</p>
+
+            <div class="grid-4">
+                <div>
+                    <img src="assets/icon_evaluation.svg" alt="Evaluation Icon">
+                    <h3>Standardized Benchmarking</h3>
+                    <p>Evaluate your AI models against our curated datasets of e-commerce comments, labeled for objectionable content.</p>
+                </div>
+                <div>
+                    <img src="assets/icon_api.svg" alt="API Icon">
+                    <h3>API-Driven Evaluation</h3>
+                    <p>Submit your AI solutions via API for automated testing and receive detailed performance reports.</p>
+                </div>
+                <div>
+                    <img src="assets/icon_periodic.svg" alt="Periodic Testing Icon">
+                    <h3>Periodic Testing</h3>
+                    <p>Schedule regular evaluations to monitor performance over time and adapt to evolving language trends.</p>
+                </div>
+                <div>
+                    <img src="assets/icon_custom.svg" alt="Custom Icon">
+                    <h3>Custom Scenarios</h3>
+                    <p>Define specific evaluation scenarios tailored to your unique needs and use cases.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section id="how-it-works">
+            <h2>How It Works</h2>
+            <div class="steps">
+                <div>
+                    <h3>1. Submit Your AI</h3>
+                    <p>Use our API to submit your content moderation model or system for evaluation.</p>
+                </div>
+                <div>
+                    <h3>2. Automated Evaluation</h3>
+                    <p>tröe runs your AI against our standardized datasets or your custom scenarios.</p>
+                </div>
+                <div>
+                    <h3>3. Receive Detailed Reports</h3>
+                    <p>Get comprehensive performance data, including precision, recall, F1-score, latency, and error analysis.</p>
+                </div>
+                <div>
+                    <h3>4. Publish or Keep Private</h3>
+                    <p>Choose to make your results public to contribute to open knowledge or keep them private for internal use.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section id="pricing">
+            <h2>Pricing</h2>
+            <p>tröe is committed to open access and transparency. We offer both free and paid options to meet a variety of needs.</p>
+
+            <div class="pricing-table">
+                <div>
+                    <h3>Public Evaluation</h3>
+                    <p>Free</p>
+                    <ul>
+                        <li>Standardized Benchmarking</li>
+                        <li>API Access</li>
+                        <li>Public Results</li>
+                        <li>Community Support</li>
+                    </ul>
+                    <button class="button">Get Started</button>
+                </div>
+                <div>
+                    <h3>Private Evaluation</h3>
+                    <p>$500 / job</p>
+                    <ul>
+                        <li>All Free features plus</li>
+                        <li>Custom Scenarios</li>
+                        <li>Private Results</li>
+                        <li>Priority Support</li>
+                    </ul>
+                    <button class="button">Submit Job</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section>
+            <h2>Ready to Evaluate Your AI?</h2>
+            <p>Join the tröe community and contribute to a more transparent and trustworthy AI ecosystem.</p>
+            <button class="button">Submit Job</button>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have questions or want to learn more? Reach out to us!</p>
+
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="button">Send Message</button>
+            </form>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2023 tröe. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

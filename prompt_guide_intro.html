@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Awesome Prompt Playbook</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f7f7f7;
+        }
+        h1, h2, h3 {
+            color: #282c34;
+        }
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 2em;
+            margin-top: 30px;
+            border-bottom: 2px solid #282c34;
+            padding-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.5em;
+            margin-top: 25px;
+        }
+        p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+        strong {
+            color: #282c34;
+        }
+        ul, ol {
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .example {
+            background-color: #e8f0fe;
+            border-left: 4px solid #4a90e2;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        .example-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #eee;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .container{
+            max-width: 800px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>The Awesome Prompt Playbook: Your Guide to Getting AI to Do Your Bidding (Almost!)</h1>
+
+    <h2>Introduction: Welcome to the World of Prompts!</h2>
+    <p>AI tools are like super-smart digital assistants. They can write, brainstorm, research, create images, and even help you code! But to get the best out of these amazing tools, you need to learn how to "talk" to them effectively. That's where <strong>prompts</strong> come in.</p>
+
+    <h3>What's a Prompt, Anyway?</h3>
+    <p>A prompt is simply a set of instructions or a question you give to an AI. It's like giving directions to a friend – the clearer and more specific your directions, the better they'll understand where you want to go.  For example, you could ask an AI to "Write a poem about nature," or "Summarize the main points of this article."</p>
+
+    <h3>What Happens When You Create a Prompt? The Magic Behind the Scenes</h3>
+    <p>When you type a prompt into an AI application, something pretty cool happens behind the scenes. It's not just your words that the AI "sees." The AI application often enhances your prompt with extra information, making it even more powerful. Let's break it down:</p>
+    <ol>
+        <li><strong>Your Prompt:</strong> This is the text you type in, your request to the AI.</li>
+        <li><strong>Contextual Augmentation:</strong> The AI application might add information related to your prompt, like:
+            <ul>
+                <li><strong>Background knowledge:</strong> General facts and information relevant to your request.</li>
+                <li><strong>Current conversation history:</strong>  If you're having a back-and-forth with the AI, it remembers the previous exchanges to keep the conversation flowing.</li>
+                <li><strong>User profile:</strong> The AI might know your preferences or past interactions, helping it tailor the response to you.</li>
+            </ul>
+        </li>
+        <li><strong>Objective Guidance:</strong> The AI application may add instructions to guide the AI towards a specific goal, like:
+            <ul>
+                <li>"Be concise and to the point."</li>
+                <li>"Use a formal tone."</li>
+                <li>"Provide a comprehensive answer."</li>
+            </ul>
+        </li>
+        <li><strong>Document Retrieval (Sometimes):</strong> In some cases, the AI application might even search through relevant documents and include information from them in the prompt. This helps the AI provide more accurate and in-depth responses. For example, if you were to ask a question related to a document you are viewing, the AI application may include the text of the document as part of the prompt.</li>
+        <li><strong>The "Super Prompt":</strong>  All of this extra information gets combined with your original prompt to create a "super prompt" that the AI model actually processes. This super prompt is much richer and more detailed than what you initially typed.</li>
+        <li><strong>The AI's Response:</strong> The AI model uses the super prompt to generate its response, taking into account all the added context and instructions.</li>
+    </ol>
+    <p>So, even a simple prompt can trigger a complex process behind the scenes. The AI application is working hard to understand your request and provide the best possible response!</p>
+
+    <h2>How to Write Effective Prompts: The Prompt Power Formula - PCTF</h2>
+    <p>Think of prompt creation like building a super-powered robot. You need the right parts and instructions to make it awesome!  To get the best results from AI, you need to craft prompts that are clear, specific, and provide the AI with enough information to understand what you want.  Here are the key ingredients.  We call this <strong>PCTF</strong>:</p>
+    <ul>
+        <li><strong>P - Persona:</strong> Who do you want the AI to be? A poet? A scientist? A comedian? The more specific, the better! This helps set the tone and style of the response.</li>
+        <li><strong>C - Context:</strong> What's the background information? What is the situation? Why are you asking? Give the AI some details to set the stage. This helps the AI understand the purpose of your request.</li>
+        <li><strong>T - Task:</strong> What do you want the AI to <em>do</em>? Write a story? Answer a question? Generate ideas? Summarize text?  Be clear and precise about the desired action.</li>
+        <li><strong>F - Format:</strong> How do you want the output to look? A poem? A list? A script? A table? Tell the AI your preferred style and structure.</li>
+    </ul>
+
+    <p>Let's look at an example to see how PCTF works in action:</p>
+    <div class="example">
+        <p class="example-title">Example Prompt:</p>
+        <ul>
+            <li><strong>Persona:</strong> A knowledgeable history professor with a knack for making complex topics easy to understand.</li>
+            <li><strong>Context:</strong> I'm studying for a history test, and I'm confused about the events leading up to WWII.</li>
+            <li><strong>Task:</strong> Explain the main causes of World War II in a way that's clear and engaging, like you're telling a story.</li>
+            <li><strong>Format:</strong> A bulleted list with a short paragraph explanation for each cause.</li>
+        </ul>
+    </div>
+
+    <h2>Experiment and Discover:  Become a Prompt Master!</h2>
+    <p>The best way to learn how to write effective prompts is to experiment! Try different combinations of personas, contexts, tasks, and formats to see what works best for different types of problems.  Here are some suggestions to get you started:</p>
+    <ul>
+        <li><strong>Start Simple, Then Add Detail:</strong> Begin with a basic prompt and then gradually add more specific instructions to see how it affects the output.</li>
+        <li><strong>Try Different Personas:</strong>  See how the tone and style change when you ask the AI to be a different character or expert.</li>
+        <li><strong>Vary the Format:</strong> Experiment with different output formats (lists, tables, stories, scripts, etc.) to find the best way to present the information.</li>
+        <li><strong>Use Examples:</strong> Providing examples in your prompt can help guide the AI towards the desired output. You can say things like, "Write a poem in the style of Emily Dickinson" or "Generate a list of ideas similar to these examples:..."</li>
+        <li><strong>Iterate and Refine:</strong> Don't be afraid to revise your prompts based on the AI's responses. If the output isn't quite what you wanted, try adjusting your prompt and asking again.  This process of going back and forth with the AI is called "prompt engineering" and it is a powerful way to get better results. We will cover more of this in the next sections.</li>
+        <li><strong>Test and Compare:</strong> Create multiple prompts for the same task and compare the results. This can help you identify which prompting strategies are most effective.</li>
+        <li><strong>Explore and Have Fun!</strong>: The world of AI is full of possibilities. Don't be afraid to get creative and see what amazing things you can create with the power of prompts.</li>
+    </ul>
+    <p>By following these tips and experimenting with different approaches, you'll quickly develop your prompting skills and unlock the full potential of AI tools. In the next chapters we will explore more examples and go into details on how to refine and iterate on AI responses, shaping them to perfectly match your vision.  Stay tuned!</p>
+    </div>
+</body>
+</html>
