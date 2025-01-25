@@ -7,6 +7,51 @@
     <style>
         body {
             font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .top-nav {
+            background-color: #f8f9fa;
+            padding: 0.5rem 2rem;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .short-logo {
+            width: 150px;
+            height: auto;
+        }
+        .top-nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .top-nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .top-nav-links a:hover {
+            color: #1f77b4;
+        }
+        .cta-button {
+            background-color: #1f77b4;
+            color: white !important;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #145c8e;
+        }
+        .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
@@ -55,10 +100,60 @@
             border-top: 1px solid #ddd;
             text-align: center;
         }
+        .logo {
+            max-width: 400px;
+            height: auto;
+            margin: 0 auto 2rem auto;
+            display: block;
+        }
+        .main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .nav-bar {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #ddd;
+        }
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .nav-links a:hover {
+            color: #1f77b4;
+        }
     </style>
 </head>
 <body>
-    <div class="main">
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <a href="index.html">
+            <img src="images/shortLogo.png" alt="AIxponential Logo" class="short-logo">
+        </a>
+        <ul class="top-nav-links">
+            <li><a href="electric_shepherd.html">Electric Shepherd</a></li>
+            <li><a href="troe.html">tröe</a></li>
+            <li><a href="prompt_guide_intro.html">Prompt Guide</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="get_involved.html" class="cta-button">Get Involved</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Main Logo -->
+        <img src="images/fullLogoURL.png" alt="AIxponential Logo" class="logo">
+
         <!-- Hero Section -->
         <h1 class="hero-text">Get Involved: Power the AI Revolution Through Education and Openness</h1>
         

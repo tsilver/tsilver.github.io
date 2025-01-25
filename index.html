@@ -11,32 +11,33 @@
             padding: 0;
             line-height: 1.6;
         }
+        .logo {
+            max-width: 400px;
+            height: auto;
+            margin: 0 auto 2rem auto;
+            display: block;
+        }
         .nav-bar {
-            background-color: #333;
-            padding: 0.5rem 1rem;
-            position: sticky;
-            top: 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            background-color: #f8f9fa;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #ddd;
         }
         .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
             display: flex;
-            align-items: center;
+            justify-content: center;
+            gap: 2rem;
         }
-        .nav-bar a {
-            color: white;
+        .nav-links a {
             text-decoration: none;
-            padding: 0.5rem 1rem;
-            margin: 0 0.5rem;
+            color: #333;
+            font-weight: 500;
         }
-        .nav-bar a:hover {
-            background-color: #555;
-            border-radius: 4px;
-        }
-        .nav-logo {
-            height: 40px;
-            width: auto;
+        .nav-links a:hover {
+            color: #1f77b4;
         }
         .container {
             max-width: 1200px;
@@ -83,27 +84,74 @@
                 max-width: 300px;
             }
         }
+        .top-nav {
+            background-color: #f8f9fa;
+            padding: 0.5rem 2rem;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .short-logo {
+            width: 150px;  /* 50% larger than original */
+            height: auto;
+        }
+        .top-nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .top-nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .top-nav-links a:hover {
+            color: #1f77b4;
+        }
+        .cta-button {
+            background-color: #1f77b4;
+            color: white !important;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #145c8e;
+            color: white !important;
+        }
+        .main-content {
+            padding-top: 2rem;
+        }
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="nav-bar">
-        <img src="images/shortLogo.png" alt="AIxponential Logo" class="nav-logo">
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="electric_shepherd.html">Electric Shepherd</a>
-            <a href="troe.html">tröe</a>
-            <a href="get_involved.html">Get Involved</a>
-            <a href="newsletter.html">Newsletter</a>
-        </div>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <a href="index.html">
+            <img src="images/shortLogo.png" alt="AIxponential Logo" class="short-logo">
+        </a>
+        <ul class="top-nav-links">
+            <li><a href="electric_shepherd.html">Electric Shepherd</a></li>
+            <li><a href="troe.html">tröe</a></li>
+            <li><a href="prompt_guide_intro.html">Prompt Guide</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="get_involved.html" class="cta-button">Get Involved</a></li>
+        </ul>
     </nav>
 
-    <div class="container">
-        <!-- Header with Full Logo -->
-        <div class="header-section">
-            <h1>Shaping the Future of AI Education</h1>
-            <img src="images/fullLogoURL.png" alt="AIxponential Full Logo" class="header-logo">
-        </div>
+    <div class="container main-content">
+        <!-- Main Logo -->
+        <img src="images/fullLogoURL.png" alt="AIxponential Logo" class="logo">
+        
+        <!-- Rest of content -->
+        <h1>Shaping the Future of AI Education</h1>
 
         <!-- Mission Section -->
         <h2>Our Mission</h2>

@@ -11,6 +11,47 @@
             padding: 0;
             line-height: 1.6;
         }
+        .top-nav {
+            background-color: #f8f9fa;
+            padding: 0.5rem 2rem;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .short-logo {
+            width: 150px;
+            height: auto;
+        }
+        .top-nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .top-nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .top-nav-links a:hover {
+            color: #1f77b4;
+        }
+        .cta-button {
+            background-color: #1f77b4;
+            color: white !important;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #145c8e;
+        }
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -39,10 +80,9 @@
             margin: 2rem 0;
         }
         .header {
-            display: grid;
-            grid-template-columns: 150px 1fr;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
-            gap: 2rem;
             margin-bottom: 2rem;
         }
         .nav-links {
@@ -86,13 +126,57 @@
             padding-top: 1rem;
             text-align: center;
         }
+        .logo {
+            max-width: 400px;
+            height: auto;
+            margin: 0 auto 2rem auto;
+            display: block;
+        }
+        .nav-bar {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #ddd;
+        }
+        .nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .nav-links a:hover {
+            color: #1f77b4;
+        }
     </style>
 </head>
 <body>
+    <!-- Top Navigation -->
+    <nav class="top-nav">
+        <a href="index.html">
+            <img src="images/shortLogo.png" alt="AIxponential Logo" class="short-logo">
+        </a>
+        <ul class="top-nav-links">
+            <li><a href="electric_shepherd.html">Electric Shepherd</a></li>
+            <li><a href="troe.html">tröe</a></li>
+            <li><a href="prompt_guide_intro.html">Prompt Guide</a></li>
+            <li><a href="newsletter.html">Newsletter</a></li>
+            <li><a href="get_involved.html" class="cta-button">Get Involved</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
-        <!-- Header -->
+        <!-- Main Logo -->
+        <img src="images/fullLogoURL.png" alt="tröe logo" class="logo">
+        
+        <!-- Page-specific navigation -->
         <header class="header">
-            <img src="assets/troe_logo.svg" alt="tröe logo" width="150">
             <nav>
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
