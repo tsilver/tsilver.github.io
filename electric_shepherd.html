@@ -54,12 +54,23 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 2rem;
+            padding-top: 0rem;
+            padding-right: 2rem;
+            padding-bottom: 2rem;
+            padding-left: 2rem
         }
         .hero-text {
             font-size: 3rem;
             font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .catchphrase {
+            font-size: 1.8rem;
+            font-family: 'Georgia', serif;
+            font-style: italic;
+            color: #1f77b4;
             margin-bottom: 2rem;
+            line-height: 1.3;
         }
         .section-header {
             font-size: 2rem;
@@ -109,36 +120,65 @@
             height: auto;
             margin-bottom: 2rem;
         }
+        .hero-section {
+            max-width: 1200px;
+            margin: 4rem 0;
+            text-align: left;
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+        }
+        .hero-section p.hero-description {
+            font-size: 1.2rem !important;
+            line-height: 1.0;
+            color: #333;
+        }
     </style>
 </head>
+       <nav class="top-nav">
+            <a href="index.html">
+                <img src="images/shortLogo.png" alt="AIxponential Logo" class="short-logo">
+            </a>
+            <ul class="top-nav-links">
+                <li><a href="electric_shepherd.html">Electric Shepherd</a></li>
+                <li><a href="troe.html">tröe</a></li>
+                <li><a href="prompt_guide_intro.html">Prompt Guide</a></li>
+                <li><a href="newsletter.html">Newsletter</a></li>
+                <li><a href="get_involved.html" class="cta-button">Get Involved</a></li>
+            </ul>
+        </nav>
+            <!-- Breadcrumb navigation -->
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a> &gt; <a href="electric_shepherd.html">Electric Shepherd</a> 
+            </nav>
+    
+            <style>
+                .breadcrumb {
+                    padding: 0.5rem 0;
+                    color: #666;
+                    margin-bottom: 0rem;
+                    margin-left: auto;
+                    margin-right: 25%;
+                    font-size: 1.125em;
+                }
+                .breadcrumb a {
+                    color: #1f77b4;
+                    text-decoration: none;
+                }
+                .breadcrumb a:hover {
+                    text-decoration: underline;
+                }
+            </style>
 <body>
-    <!-- Top Navigation -->
-    <nav class="top-nav">
-        <a href="index.html">
-            <img src="images/shortLogo.png" alt="AIxponential Logo" class="short-logo">
-        </a>
-        <ul class="top-nav-links">
-            <li><a href="electric_shepherd.html">Electric Shepherd</a></li>
-            <li><a href="troe.html">tröe</a></li>
-            <li><a href="prompt_guide_intro.html">Prompt Guide</a></li>
-            <li><a href="newsletter.html">Newsletter</a></li>
-            <li><a href="get_involved.html" class="cta-button">Get Involved</a></li>
-        </ul>
-    </nav>
 
     <div class="container">
-        <!-- Main Logo -->
-        <img src="images/fullLogoURL.png" alt="Electric Shepherd Logo" class="logo">
 
         <!-- Hero Section -->
-        <div class="grid">
-            <div>
-                <p class="hero-text">Electric Shepherd:<br>You will not get the answer if you do not know how to ask...</p>
-                <p>We are in the early days of AI. My friends and I were there for the early days of the PC, early days of the internet, early days of mobile, early days of cloud computing, and now we are in the early days of AI. We are here to help you on the journey the future of AI.</p>
-            </div>
-            <div>
-                <img src="images/fullLogoURL.png" alt="Electric Shepherd AI Education">
-            </div>
+        <div class="hero-section">
+            <h1 class="hero-text">Electric Shepherd</h1>
+            <h2 class="catchphrase">To get the right answer, learn to ask the right questions...</h2>
+            <p class="hero-description">We are in the early days of AI and seeking partnerships to navigate the journey to an ethical future for AI in AI  Education.</p>
         </div>
 
         <!-- Mission Statement -->
@@ -147,16 +187,49 @@
 
         <!-- Initiatives Section -->
         <h1>Our Initiatives</h1>
-
-        <!-- tröe Initiative -->
-        <div class="grid">
+        <!-- Teach the Teacher Initiative -->
+        <div >
             <div>
-                <h2>tröe: Impartial and Transparent Tools for AI Engineering</h2>
-                <p>Pursuing practical AI Engineering insights to support AI Engineering decision making. We are transparent in our methodology and continuously incorporate feedback to remove bias. tröe leverages volunteer services to develops open source tools to conduct public and private experiments. Check out the work on Content Moderation intended to inform stochastic decision making.</p>
-                <button class="button">Learn More About tröe</button>
+                <h2>Empowering Educators: Building the Future of AI Literacy</h2>
+                <p>Join us in shaping the next generation of AI innovators. Our "Teach the Teacher" initiative provides educators with the tools, resources, and support they need to confidently bring AI education into the classroom. We believe that empowering teachers is the key to unlocking the transformative potential of AI for all students. We are committed to providing a comprehensive curriculum that is adaptable to existing educational frameworks in both STEM and the Humanities. We leverage a community of volunteers and promote an open-source model to encourage collaboration and feedback.  The foundation of our curriculum is based on understanding the core concepts of AI literacy and how to use large language models to help create and deliver curriculum suited to a wide variety of students.  Our goal is to incorporate AI into as many aspects of education as possible so that students will gain familiarity and develop the intuition needed to effectively interact with AI on a daily basis.</p>
+                <button class="button">Learn More About Our "Teach the Teacher" Program</button>
             </div>
+        </div>
+
+        <!-- Curriculum Development Initiative -->
+        <div >
             <div>
-                <img src="https://placeholder.com/400x300" alt="AI Engineering Tools">
+                <h2>Co-Creating the Future: AI Curriculum Development for Educators</h2>
+                <p>Be a part of building a cutting-edge AI curriculum. Our "Teach the Teacher" program is focused on collaborative development, empowering educators to contribute to and shape the future of AI education. We provide the framework, tools, and support; you bring your expertise and classroom experience to help us create engaging and relevant learning experiences for students.  Our focus is on creating a core curriculum that can be adapted to specific needs and to showcase how AI tools can be incorporated into the classroom to improve efficiency and learning.  Our AI tools use a structured approach to curriculum development that encourages broad participation and rapid development.</p>
+                <button class="button">Join Our Curriculum Development Community</button>
+            </div>
+        </div>
+
+        <!-- AI Literacy Initiative -->
+        <div >
+            <div>
+                <h2>Beyond STEM: Bringing AI Literacy to All Disciplines</h2>
+                <p>AI is not just for computer scientists. Our "Teach the Teacher" initiative is designed to help educators across all disciplines – from history and literature to art and social sciences – integrate AI concepts and tools into their teaching. We believe that AI literacy is essential for all students, regardless of their chosen field.  We leverage the power of AI to help develop curriculum that is adaptable to a wide range of subjects.  We show how to incorporate AI into the classroom and provide a framework for helping students develop their intuition for effectively interacting with AI. </p>
+                <button class="button">Discover How AI Can Enhance Your Curriculum</button>
+            </div>
+        </div>
+
+        <!-- Prompt Engineering Initiative -->
+        <div >
+            <div>
+                <h2>Unlocking the Power of AI: Mastering Prompt Engineering for the Classroom</h2>
+                <p>Prompt engineering is the key to harnessing the full potential of AI. Our "Teach the Teacher" program provides educators with in-depth training on prompt engineering, empowering them to guide students in effectively interacting with large language models and other AI tools. Join us and learn how to craft prompts that inspire critical thinking, creativity, and problem-solving. We help teachers develop their own skills at creating effective prompts and also create a framework for incorporating prompt engineering into every aspect of the curriculum.  Our approach to curriculum development is designed to make prompt engineering a core skill that is used to enhance learning in every subject. </p>
+                <button class="button">Become a Prompt Engineering Expert</button>
+            </div>
+        </div>
+
+
+        <!-- Student Development Initiative -->
+        <div >
+            <div>
+                <h2>Developing Human Skills: AI to support learning</h2>
+                <p>The key to effective use of AI is developing strong human skills for working with AI.  Our "Teach the Teacher" program helps educators learn how to use AI to evaluate what underlying skills are needed to use AI tools and to incorporate those into the curriculum.  We help educators create curriculum that uses AI to enhance education and improve learning outcomes for students.  We focus on fundamental skills and how AI can be leveraged to learn new skills and to support traditional education.</p>
+                <button class="button">Learn to use AI to Support Learning</button>
             </div>
         </div>
 
@@ -167,7 +240,19 @@
             </div>
             <div>
                 <h2>AI Summer Camp: Igniting Young Minds</h2>
-                <p>Our AI Summer Camp is an immersive experience designed to spark a passion for AI in the next generation through hands-on projects, interactive workshops, and engaging challenges.</p>
+                <p><b>Get ready for the ultimate AI adventure!</b> Our <b>AI Summer Camp</b> is a one-of-a-kind, immersive experience designed to ignite a passion for Artificial Intelligence in the next generation.  We're talking <b>hands-on projects, interactive workshops, and mind-bending challenges</b> that will transform campers into AI explorers!</p>
+
+                <p><b>What awaits you at our AI Summer Camp?</b></p>
+                
+                <ul>
+                  <li>🤖 <b>Dive into Real-World AI Projects:</b>  Campers won't just learn about AI – they'll build it! Get ready to create amazing projects that showcase the power of AI.</li>
+                  <li>🧠 <b>Interactive Workshops Led by AI Experts:</b> Learn from the best in the field through engaging workshops designed to make complex concepts easy to understand.</li>
+                  <li>🔥 <b>Conquer Exciting AI Challenges:</b>  Put your new skills to the test with challenges that will push your creativity and problem-solving abilities to the limit!</li>
+                  <li>💡 <b>Unleash Your Inner Innovator:</b> Discover the power of AI and how it can be used to change the world. Our camp will inspire you to think big and dream even bigger.</li>
+                </ul>
+                
+                <p><b>Don't miss out on this incredible opportunity to explore the future of technology!</b></p>
+                <button class="button">Enroll in AI Summer Camp Now!</button>
                 <button class="button">Explore AI Summer Camp</button>
             </div>
         </div>
@@ -176,7 +261,27 @@
         <div class="grid">
             <div>
                 <h2>AI Clubs</h2>
-                <p>Resources for educators and students to start AI Clubs in their schools. We are working with educators to develop curriculum and resources to support AI Clubs in their schools. Here is an example <a href="newsletter">newsletter</a></p>
+                <p><b>Want to bring the awesome power of Artificial Intelligence to your school?</b>  We're here to help you launch your own <b>AI Club</b> and ignite a passion for AI in your students! We're teaming up with educators to create amazing curriculum and resources, making it super easy to get started.</p>
+
+                <p><b>Here's how we'll help you create an amazing AI Club:</b></p>
+                
+                <ul>
+                  <li>🔥 <b>Generate Excitement with AI-Powered Newsletters:</b> Learn how to use AI to create engaging newsletters that will keep your club members informed and excited.
+                    <ul>
+                      <li><a href="newsletter">➡️ Click here to see how to make your club newsletter awesome!</a></li>
+                    </ul>
+                  </li>
+                
+                  <li>🧠 <b>Become a Prompting Pro:</b> Master the art of interacting with AI through our comprehensive prompting guides. Learn how to "talk" to AI and unlock its incredible potential.
+                    <ul>
+                      <li><a href="prompt_guide_intro.html">➡️ Dive into our Prompting Guide and become an AI whisperer!</a></li>
+                    </ul>
+                  </li>
+                
+                  <li>🚀 <b>Learn AI by Doing AI:</b>  We'll guide you on a hands-on learning journey where you'll use AI tools to understand AI concepts. It's the ultimate way to learn, and we'll be here to share our knowledge every step of the way!</li>
+                </ul>
+                
+                <p><b>Ready to start your AI Club adventure? Let's do this!</b></p>
                 <button class="button">Learn More About AI Clubs</button>
             </div>
             <div>
@@ -184,25 +289,25 @@
             </div>
         </div>
 
-        <!-- Get Involved Section -->
-        <h1>Get Involved</h1>
-        <div class="grid grid-3">
-            <div>
-                <h2>Donate</h2>
-                <p>Support our mission to make AI education accessible to all.</p>
-                <button class="button">Donate Now</button>
-            </div>
-            <div>
-                <h2>Volunteer</h2>
-                <p>Join our 100% volunteer-driven organization.</p>
-                <button class="button">Volunteer Today</button>
-            </div>
-            <div>
-                <h2>Partner With Us</h2>
-                <p>Are you an educator? Let's work together!</p>
-                <button class="button">Connect With Us</button>
-            </div>
+    <!-- Get Involved Section -->
+    <h1>Get Involved</h1>
+    <div class="grid grid-3">
+        <div>
+            <h2>Donate</h2>
+            <p>Support our mission to make AI education accessible to all.</p>
+            <button class="button">Donate Now</button>
         </div>
+        <div>
+            <h2>Volunteer</h2>
+            <p>Join our 100% volunteer-driven organization.</p>
+            <button class="button">Volunteer Today</button>
+        </div>
+        <div>
+            <h2>Partner With Us</h2>
+            <p>Are you an educator? Let's work together!</p>
+            <button class="button">Connect With Us</button>
+        </div>
+    </div>
 
         <!-- Newsletter Signup -->
         <h1>Stay Connected</h1>

@@ -154,6 +154,17 @@
         .nav-links a:hover {
             color: #1f77b4;
         }
+        .analysis-intro {
+            max-width: 800px;
+            margin: 2rem 0;
+        }
+        .analysis-intro ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        .analysis-intro li {
+            margin-bottom: 0.5rem;
+        }
     </style>
 </head>
 <body>
@@ -172,27 +183,68 @@
     </nav>
 
     <div class="container">
-        <!-- Main Logo -->
-        <img src="images/fullLogoURL.png" alt="tröe logo" class="logo">
-        
-        <!-- Page-specific navigation -->
-        <header class="header">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#how-it-works">How It Works</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <button class="button">Submit Job</button>
-            </nav>
-        </header>
+
 
         <!-- Hero -->
         <h1>Unbiased AI Evaluation for a Transparent World</h1>
         <p>tröe provides independent performance data on AI systems, helping you make informed decisions and build trust.</p>
-        <button class="button">Learn More</button>
+        
+        <section id="content-moderation-testing"></section>
+            <h2>Comparative Engineering Evaluation of AI Content Moderation</h2>        
+        <div style="display: flex; gap: 1rem;">
+            <div class="analysis-intro">
+                <p>Our latest analysis explores bias mitigation in language models through comparative testing. We investigate how different models perform on debiasing tasks without custom fine-tuning, providing valuable insights for AI engineering decisions.</p>
+                
+                <p>Key questions addressed:</p>
+                <ul>
+                    <li>How do various models perform on bias detection without task-specific training?</li>
+                    <li>What are the trade-offs between fine-tuned and base models?</li>
+                    <li>How can these insights inform model selection and engineering strategies?</li>
+                </ul>
+    
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <a href="contentModerationMethodology.html" class="button">
+                        View Methodology
+                    </a>
+                    <a href="contentModerationExampleAnalysis.html" class="button" style="background-color: #1f77b4;">
+                        Read Full Analysis
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h3>Key Benefits:</h3>
+                <ul>
+                    <li>Standardized moderation across platforms</li>
+                    <li>Reduced costs through economies of scale</li>
+                    <li>Greater transparency and accountability</li>
+                    <li>Equitable access for smaller platforms</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Content Moderation Public Utility -->
+        <section id="public-utility">
+            <h2>Content Moderation: A Public Utility Approach</h2>
+            <div class="grid-2">
+                <div>
+                    <p>As AI content moderation becomes increasingly critical for online platforms, we need to rethink our approach to make it more equitable, transparent, and effective. We explore how treating AI content moderation as a public utility could democratize access to these essential services while maintaining high standards of fairness and accountability.</p>
+                    <p>Our detailed analysis examines the challenges of current content moderation systems and proposes a collaborative, utility-based model that could better serve platforms of all sizes.</p>
+                    <a href="contentModerationPublicUtility.html" class="button" style="background-color: #1f77b4;">
+                        Read the Full Analysis
+                    </a>
+                </div>
+                <div>
+                    <h3>Key Benefits:</h3>
+                    <ul>
+                        <li>Standardized moderation across platforms</li>
+                        <li>Reduced costs through economies of scale</li>
+                        <li>Greater transparency and accountability</li>
+                        <li>Equitable access for smaller platforms</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
         <!-- About -->
         <section id="about">
@@ -322,6 +374,8 @@
         <footer class="footer">
             <p>© 2023 tröe. All rights reserved.</p>
         </footer>
+
+
     </div>
 </body>
 </html>
