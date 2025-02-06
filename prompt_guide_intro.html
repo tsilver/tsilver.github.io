@@ -4,135 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Awesome Prompt Playbook</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f7f7;
-        }
-        h1, h2, h3 {
-            color: #282c34;
-        }
-        h1 {
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        h2 {
-            font-size: 2em;
-            margin-top: 30px;
-            border-bottom: 2px solid #282c34;
-            padding-bottom: 10px;
-        }
-        h3 {
-            font-size: 1.5em;
-            margin-top: 25px;
-        }
-        p {
-            margin-bottom: 15px;
-            color: #555;
-        }
-        strong {
-            color: #282c34;
-        }
-        ul, ol {
-            margin-bottom: 15px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .example {
-            background-color: #e8f0fe;
-            border-left: 4px solid #4a90e2;
-            padding: 15px;
-            margin-bottom: 20px;
-        }
-        .example-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .code {
-            font-family: 'Courier New', Courier, monospace;
-            background-color: #eee;
-            padding: 2px 5px;
-            border-radius: 3px;
-        }
-        .logo {
-            max-width: 400px;
-            height: auto;
-            margin: 0 auto 2rem auto;
-            display: block;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        .top-nav {
-            background-color: #f8f9fa;
-            padding: 0.5rem 2rem;
-            border-bottom: 1px solid #ddd;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .short-logo {
-            width: 150px;
-            height: auto;
-        }
-        .top-nav-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-        .top-nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-        }
-        .top-nav-links a:hover {
-            color: #1f77b4;
-        }
-        .cta-button {
-            background-color: #1f77b4;
-            color: white !important;
-            padding: 0.75rem 1.5rem;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        .cta-button:hover {
-            background-color: #145c8e;
-        }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Top Navigation -->
-    <nav class="top-nav">
-        <a href="index.html">
-            <img src="images/shortLogo.png" alt="AIxponential Logo" class="short-logo">
-        </a>
-        <ul class="top-nav-links">
-            <li><a href="electric_shepherd.html">Electric Shepherd</a></li>
-            <li><a href="troe.html">tröe</a></li>
-            <li><a href="prompt_guide_intro.html">Prompt Guide</a></li>
-            <li><a href="newsletter.html">Newsletter</a></li>
-            <li><a href="get_involved.html" class="cta-button">Get Involved</a></li>
-        </ul>
-    </nav>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="images/shortLogo.png" alt="AIxponential Logo" class="short-logo">
+                </a>
+                <ul>
+                    <li><a href="electric_shepherd.html">Electric Shepherd</a></li>
+                    <li><a href="troe.html">tröe</a></li>
+                    <li><a href="prompt_guide_intro.html">Prompt Guide</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                    <li><a href="get-involved.html" class="cta-button">Get Involved</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <div class="container">
-        <!-- Main Logo -->
-        <img src="images/fullLogoURL.png" alt="Electric Shepherd Logo" class="logo">
-
-        <h1>The Awesome Prompt Playbook: Your Guide to Getting AI to Do Your Bidding (Almost!)</h1>
+        <h1 class="section-title">The Awesome Prompt Playbook: Your Guide to Getting AI to Do Your Bidding (Almost!)</h1>
 
         <h2>Introduction: Welcome to the World of Prompts!</h2>
         <p>AI tools are like super-smart digital assistants. They can write, brainstorm, research, create images, and even help you code! But to get the best out of these amazing tools, you need to learn how to "talk" to them effectively. That's where <strong>prompts</strong> come in.</p>
@@ -197,5 +94,10 @@
         </ul>
         <p>By following these tips and experimenting with different approaches, you'll quickly develop your prompting skills and unlock the full potential of AI tools. In the next chapters we will explore more examples and go into details on how to refine and iterate on AI responses, shaping them to perfectly match your vision.  Stay tuned!</p>
     </div>
+    <footer class="footer">
+        <div class="container">
+            <p>AI Club Newsletter - <a href="#">Your Website Link</a></p>
+        </div>
+    </footer>
 </body>
 </html>

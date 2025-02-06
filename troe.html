@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tröe - Unbiased AI Evaluation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: sans-serif;
@@ -169,59 +173,61 @@
 </head>
 <body>
     <!-- Top Navigation -->
-    <nav class="top-nav">
-        <a href="index.html">
-            <img src="images/shortLogo.png" alt="AIxponential Logo" class="short-logo">
-        </a>
-        <ul class="top-nav-links">
-            <li><a href="electric_shepherd.html">Electric Shepherd</a></li>
-            <li><a href="troe.html">tröe</a></li>
-            <li><a href="prompt_guide_intro.html">Prompt Guide</a></li>
-            <li><a href="newsletter.html">Newsletter</a></li>
-            <li><a href="get_involved.html" class="cta-button">Get Involved</a></li>
-        </ul>
-    </nav>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <img src="images/shortLogo.png" alt="AIxponential Logo" class="short-logo">
+                </a>
+                <ul>
+                    <li><a href="electric_shepherd.html">Electric Shepherd</a></li>
+                    <li><a href="troe.html">tröe</a></li>
+                    <li><a href="prompt_guide_intro.html">Prompt Guide</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                    <li><a href="get-involved.html" class="cta-button">Get Involved</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <div class="container">
-
-
         <!-- Hero -->
         <h1>Unbiased AI Evaluation for a Transparent World</h1>
         <p>tröe provides independent performance data on AI systems, helping you make informed decisions and build trust.</p>
         
-        <section id="content-moderation-testing"></section>
+        <section id="content-moderation-testing">
             <h2>Comparative Engineering Evaluation of AI Content Moderation</h2>        
-        <div style="display: flex; gap: 1rem;">
-            <div class="analysis-intro">
-                <p>Our latest analysis explores bias mitigation in language models through comparative testing. We investigate how different models perform on debiasing tasks without custom fine-tuning, providing valuable insights for AI engineering decisions.</p>
-                
-                <p>Key questions addressed:</p>
-                <ul>
-                    <li>How do various models perform on bias detection without task-specific training?</li>
-                    <li>What are the trade-offs between fine-tuned and base models?</li>
-                    <li>How can these insights inform model selection and engineering strategies?</li>
-                </ul>
-    
-                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
-                    <a href="contentModerationMethodology.html" class="button">
-                        View Methodology
-                    </a>
-                    <a href="contentModerationExampleAnalysis.html" class="button" style="background-color: #1f77b4;">
-                        Read Full Analysis
-                    </a>
+            <div style="display: flex; gap: 1rem;">
+                <div class="analysis-intro">
+                    <p>Our latest analysis explores bias mitigation in language models through comparative testing. We investigate how different models perform on debiasing tasks without custom fine-tuning, providing valuable insights for AI engineering decisions.</p>
+                    
+                    <p>Key questions addressed:</p>
+                    <ul>
+                        <li>How do various models perform on bias detection without task-specific training?</li>
+                        <li>What are the trade-offs between fine-tuned and base models?</li>
+                        <li>How can these insights inform model selection and engineering strategies?</li>
+                    </ul>
+        
+                    <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                        <a href="contentModerationMethodology.html" class="button">
+                            View Methodology
+                        </a>
+                        <a href="contentModerationExampleAnalysis.html" class="button" style="background-color: #1f77b4;">
+                            Read Full Analysis
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3>Key Benefits:</h3>
+                    <ul>
+                        <li>Standardized moderation across platforms</li>
+                        <li>Reduced costs through economies of scale</li>
+                        <li>Greater transparency and accountability</li>
+                        <li>Equitable access for smaller platforms</li>
+                    </ul>
                 </div>
             </div>
-            <div>
-                <h3>Key Benefits:</h3>
-                <ul>
-                    <li>Standardized moderation across platforms</li>
-                    <li>Reduced costs through economies of scale</li>
-                    <li>Greater transparency and accountability</li>
-                    <li>Equitable access for smaller platforms</li>
-                </ul>
-            </div>
-
-        </div>
+        </section>
 
         <!-- Content Moderation Public Utility -->
         <section id="public-utility">
@@ -374,8 +380,6 @@
         <footer class="footer">
             <p>© 2023 tröe. All rights reserved.</p>
         </footer>
-
-
     </div>
 </body>
 </html>

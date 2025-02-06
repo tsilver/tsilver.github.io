@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIxponential - Get Involved</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                <img src="images/shortLogo.png" alt="AIxponential Logo" style="height: 100px; float: left; margin-right: 20px;">
+                </a>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#programs">Programs</a></li>
+                    <li><a href="#">Get Involved</a></li>
+                    <li><a href="#news">News & Updates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+   
+       <section id="get-involved">
+         <div class="container">
+           <h2 class="section-title">Get Involved</h2>
+           <p>Help Shape the Future of AI.  We rely on the support of volunteers, donors, and partners to continue.</p>
+   
+           <div class="two-column">
+             <div>
+               <h3>Volunteer</h3>
+               <p>We are always looking for passionate individuals to join our team of volunteers. Whether you're an AI expert, an educator, a developer, or simply someone who cares about the future of AI, there are many ways to contribute.</p>
+                <p>Opportunities include:</p>
+                <ul>
+                    <li>Curriculum development</li>
+                    <li>Mentoring students</li>
+                    <li>Assisting with events</li>
+                     <li>Contributing to Troe's research</li>
+                    <li>And more!</li>
+                 </ul>
+               <a href="#volunteer-form" class="button">Apply to Volunteer</a>
+             </div>
+   
+             <div>
+                <h3>Donate</h3>
+                 <p>Your generous donations help us expand our programs, reach more people, and ensure a future where AI benefits all of humanity.</p>
+                  <ul>
+                      <li><a href="#donate-money">Donate Money</a></li>
+                      <li><a href="#volunteer-form">Donate Time</a></li>
+                       <li><a href="#contact">Donate Compute Resources</a></li>
+                   </ul>
+                   <p>Your contribution, no matter the size, makes a difference!</p>
+              </div>
+           </div>
+           <div>
+                <h3>Partner</h3>
+                <p>We collaborate with organizations across various sectors to advance our mission. If you're interested in partnering with us, please contact us to explore potential opportunities.</p>
+                 <a href="#contact" class="button">Contact Us to Discuss Partnerships</a>
+             </div>
+            <div id="volunteer-form">
+                 <h3>Volunteer Application</h3>
+               <form action="#" method="post">  <label for="name">Name:< /
+                // ... existing code ...
+                   <input type="text" id="name" name="name" required>
+   
+                   <label for="email">Email:</label>
+                   <input type="email" id="email" name="email" required>
+   
+                   <label for="skills">Skills & Interests:</label>
+                   <textarea id="skills" name="skills" rows="4" required></textarea>
+   
+                   <label for="availability">Availability:</label>
+                    <textarea id="availability" name="availability" rows="4" required></textarea>
+                   <button type="submit">Submit Application</button>
+                </form>
+           </div>
+            <div id="donate-money">
+               <h3>Make a Donation</h3>
+               <p>Your financial contribution helps us fulfill our mission.  (Link to secure payment gateway coming soon.)</p>
+                </div>
+         </div>
+       </section>
+   
+        <section id="news">
+            <div class="container">
+                <h2 class="section-title">News & Updates</h2>
+                <div class="news-item">
+                    <h3>AIxponential Launches New Website!</h3>
+                    <p>We're excited to announce the launch of our new website, designed to better connect with our community and share our work. Explore our programs, learn how to get involved, and stay up-to-date on the latest news.</p>
+                   <a href="#">Read More</a>
+                </div>
+                <div class="news-item">
+                     <h3>Seeking Volunteers for AI Summer Camp</h3>
+                     <p>We're looking for passionate volunteers to help with our upcoming AI Summer Camp. If you have experience in AI or education, we encourage you to apply!</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </section>
+   
+       <section id="contact">
+           <div class="container">
+               <h2 class="section-title">Contact Us</h2>
+               <form action="#" method="post">  {/* Replace "#" with your actual form processing script */}
+                   <label for="name">Name:</label>
+                   <input type="text" id="name" name="name" required>
+   
+                   <label for="email">Email:</label>
+                   <input type="email" id="email" name="email" required>
+   
+                   <label for="message">Message:</label>
+                   <textarea id="message" name="message" rows="5" required></textarea>
+   
+                   <button type="submit">Send Message</button>
+               </form>
+               <p>Email: info@aixponential.org</p>
+               {/*  <p>Mailing Address: 168 Orchard Road Wilmington OH 45177</p> */}
+           </div>
+       </section>
+   
+       <footer>
+           <div class="container">
+               <p>&copy; 2025 AIxponential. All rights reserved.</p>
+               <div class="footer-links">
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Terms of Service</a>
+               </div>
+           </div>
+       </footer>
+     <script>
+     // Accordion functionality
+     document.addEventListener('DOMContentLoaded', function() {
+       const accordionHeaders = document.querySelectorAll('.accordion-header');
+   
+       accordionHeaders.forEach(header => {
+         header.addEventListener('click', function() {
+           const item = this.parentElement;
+           item.classList.toggle('active');
+   
+           // Close other open accordion items
+           accordionHeaders.forEach(otherHeader => {
+             if (otherHeader !== header) {
+               otherHeader.parentElement.classList.remove('active');
+             }
+           });
+         });
+       });
+     });
+     </script>
+   
+   </body>
+   </html>

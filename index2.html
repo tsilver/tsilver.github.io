@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIxponential</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* Basic Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Lora', serif;
+            font-weight: 700;
+            margin-bottom: 0.5em;
+        }
+
+        h1 { font-size: 3em; line-height: 1.2; }
+        h2 { font-size: 2em; }
+        h3 { font-size: 1.5em; }
+
+        a {
+            color: #0056b3;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: #003366;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #fff;
+            padding: 1em 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky; /* Make header sticky */
+            top: 0;           /* Stick to the top */
+            z-index: 100;    /* Ensure it stays on top of other content */
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            display: block; /* Make links occupy full list item space */
+            padding: 0.5em 1em;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            border-bottom: 2px solid transparent; /* Invisible border for hover effect */
+            transition: border-bottom 0.2s ease;
+        }
+        nav ul li a:hover {
+            border-bottom: 2px solid #0056b3;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #f8f8f8;
+            padding: 3em 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            margin-bottom: 0.5em;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+            color: #555;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 0.75em 1.5em;
+            background-color: #0056b3;
+            color: #fff;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+
+        .button:hover {
+            background-color: #003366;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 4em 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2em;
+        }
+
+        .program-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2em;
+            margin-bottom: 2em;
+            text-align: center; /* Center content within cards */
+            transition: transform 0.2s ease;
+        }
+
+        .program-card:hover {
+             transform: translateY(-5px);
+        }
+         .program-card img {
+             max-width: 100%; /* Make images responsive */
+             height: auto;
+             border-radius: 8px; /* Optional: Rounded corners for images */
+             margin-bottom: 1em;
+         }
+
+
+        /* Two-Column Layout (for Programs) */
+        .two-column {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2em;
+        }
+        @media (max-width: 768px) { /* Responsive for smaller screens */
+            .two-column {
+                grid-template-columns: 1fr; /* Stack columns on small screens */
+            }
+        }
+
+        /* Accordion Styles (for Electric Shepherd & Troe details) */
+        .accordion {
+            margin-bottom: 1em;
+        }
+        .accordion-item {
+          border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-header {
+            padding: 1em;
+            background-color: #f0f0f0;
+            cursor: pointer;
+            font-weight: bold;
+             display: flex; /* Use flexbox for alignment */
+            justify-content: space-between; /* Space out title and icon */
+            align-items: center; /* Vertically center content */
+        }
+
+        .accordion-header:hover {
+            background-color: #e0e0e0;
+        }
+
+        .accordion-content {
+            padding: 1em;
+            display: none; /* Initially hidden */
+        }
+        .accordion-icon { /* Plus/Minus icon */
+            font-size: 1.2em;
+            transition: transform 0.3s ease;
+         }
+
+        .accordion-item.active .accordion-content {
+           display: block;
+         }
+        .accordion-item.active .accordion-icon {
+            transform: rotate(45deg);  /* Rotate to create a "minus" */
+         }
+       /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+        .footer-links a {
+          color: #fff;
+          margin: 0 10px;
+        }
+
+        /* Form Styles (Contact, Volunteer, etc.) */
+        form {
+          max-width: 600px;
+          margin: 0 auto;
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        form label {
+          display: block;
+          margin-bottom: 5px;
+          font-weight: bold;
+        }
+
+        form input[type="text"],
+        form input[type="email"],
+        form textarea {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 15px;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+        }
+       form textarea {
+           resize: vertical; /* Allow vertical resizing */
+        }
+
+        form button[type="submit"] {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0056b3;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+        form button[type="submit"]:hover {
+           background-color: #003366;
+        }
+
+
+         /* News & Updates Section */
+         .news-item {
+           border-bottom: 1px solid #eee;
+           padding-bottom: 1em;
+           margin-bottom: 1em;
+         }
+
+         .news-item h3 {
+           margin-bottom: 0.3em;
+         }
+         .news-item p {
+           color: #666;
+           font-size: 0.9em;
+         }
+         .news-item a {
+           font-style: italic;
+         }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#get-involved">Get Involved</a></li>
+                    <li><a href="#news">News & Updates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>AIxponential</h1>
+            <p>Empowering a Future Shaped by Knowledge, Truth, and Access.</p>
+            <a href="#programs" class="button">Learn More About Our Programs</a>
+            <a href="#donate" class="button">Donate Today</a>
+        </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Us</h2>
+        
+        <div id="our-mission">
+          <h3>Our Mission</h3>
+          <p>AIxponential is driven by the belief that artificial intelligence has the power to transform our world for the better. Our mission is to ensure that this transformation is guided by the principles of truth, knowledge, access, and trust. We strive to:</p>
+          <ul>
+              <li><strong>Empower</strong> individuals with the knowledge and skills to understand and utilize AI effectively.</li>
+              <li><strong>Promote</strong> the development and deployment of ethical and unbiased AI systems.</li>
+              <li><strong>Expand</strong> access to AI education and resources for all, regardless of background or location.</li>
+              <li><strong>Foster</strong> a collaborative environment where knowledge is shared, and the future of AI is shaped by a diverse and informed community.</li>
+          </ul>
+        </div>
+
+        <div id="our-team">
+            <h3>Our Team</h3>
+             <p>AIxponential is led by a passionate team of experts in AI, education, and non-profit management. We are currently building our board of directors and advisory boards. Check back soon to meet our team!</p>
+         </div>
+
+         <div id="our-values">
+             <h3>Our Guiding Principles</h3>
+             <ul>
+                 <li><strong>Truth:</strong> We are committed to accuracy, transparency, and unbiased information.</li>
+                 <li><strong>Knowledge:</strong> We believe in the power of education to empower individuals and communities.</li>
+                 <li><strong>Access:</strong> We strive to make AI knowledge and resources accessible to all.</li>
+                 <li><strong>Trust:</strong> We build trust through ethical practices and responsible AI development.</li>
+                 <li><strong>Hope:</strong> We envision a future where AI is a force for good, creating a more equitable and prosperous world.</li>
+                 <li><strong>Collaboration:</strong> Working across partners, volunteers, and staff.</li>
+             </ul>
+         </div>
+
+      </div>
+    </section>
+
+    <section id="programs">
+        <div class="container">
+            <h2 class="section-title">Our Programs</h2>
+            <p>AIxponential's core programs, Electric Shepherd and Troe, work synergistically to achieve our mission. Electric Shepherd focuses on building AI literacy, while Troe ensures the trustworthiness and transparency of AI systems.</p>
+
+            <div class="two-column">
+                <div class="program-card">
+                    <img src="placeholder-image-es.jpg" alt="Electric Shepherd">
+                    <h3>Electric Shepherd</h3>
+                    <p>Empowering Educators, Inspiring the Next Generation of AI Learners.</p>
+                    <a href="#electric-shepherd-detail" class="button">Learn More</a>
+                </div>
+
+                <div class="program-card">
+                    <img src="placeholder-image-troe.jpg" alt="Troe">
+                    <h3>Troe</h3>
+                    <p>Unbiased AI Evaluation for a Trustworthy Future.</p>
+                    <a href="#troe-detail" class="button">Learn More</a>
+                </div>
+            </div>
+
+            <div id="electric-shepherd-detail">
+              <h3>Electric Shepherd: Empowering Educators, Inspiring Learners</h3>
+              <p>AI Education for a Brighter Future</p>
+
+              <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">Overview <span class="accordion-icon">+</span></div>
+                    <div class="accordion-content">
+                         <p>Electric Shepherd is dedicated to advancing AI education for all. We empower teachers with the knowledge and tools to effectively integrate AI into their classrooms, fostering a new generation of AI-literate students.  We strive to make AI accessible and understandable, preparing learners of all backgrounds to navigate the future of work and society.</p>
+                    </div>
+                </div>
+
+                  <div class="accordion-item">
+                      <div class="accordion-header">Teacher Training  <span class="accordion-icon">+</span></div>
+                      <div class="accordion-content">
+                          <p>We provide comprehensive professional development programs for educators, equipping them with the knowledge, skills, and resources to effectively teach AI concepts and integrate AI tools into their classrooms. Our training focuses on practical applications, ethical considerations, and fostering critical thinking about AI.</p>
+                      </div>
+                  </div>
+                  <div class="accordion-item">
+                      <div class="accordion-header">AI Summer Camp <span class="accordion-icon">+</span></div>
+                      <div class="accordion-content">
+                          <p>Our immersive AI Summer Camps offer students hands-on experience with AI technologies, sparking their curiosity and preparing them for the future of work. Camps cover topics like machine learning, computer vision, natural language processing, and more.</p>
+                      </div>
+                  </div>
+                  <div class="accordion-item">
+                      <div class="accordion-header">AI Clubs <span class="accordion-icon">+</span></div>
+                      <div class="accordion-content">
+                        <p>We support the creation and growth of AI Clubs in schools and communities, providing resources, mentorship, and a platform for students to collaborate on AI projects and explore their interests.</p>
+                      </div>
+                  </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">Resources <span class="accordion-icon">+</span></div>
+                        <div class="accordion-content">
+                          <ul>
+                              <li><strong>Prompt Engineering:</strong> Master the art of crafting effective prompts for AI systems with our comprehensive guides and resources.</li>
+                              <li><strong>Prompting Guides:</strong> Access a library of pre-built prompts and templates for various AI tasks and applications.</li>
+                              <li><strong>Hello World Curriculum:</strong> Introduce students to the fundamentals of AI with our engaging and accessible 'Hello World' curriculum, covering topics like computer use, multimodal AI, AI games, and comparing LLM responses.</li>
+                           </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <p><strong>Funding:</strong> Electric Shepherd is supported by generous donations, grants, and partnerships. We also offer tailored training and consulting services for organizations seeking to enhance their AI capabilities.</p>
+               <a href="#get-involved" class="button">Get Involved with Electric Shepherd</a>
+            </div>
+
+            <div id="troe-detail">
+                <h3>Troe: Unbiased AI Evaluation for a Trustworthy Future</h3>
+                 <p>Ensuring Transparency and Accountability in AI Systems</p>
+
+                 <div class="accordion">
+                    <div class="accordion-item">
+                      <div class="accordion-header">Overview <span class="accordion-icon">+</span></div>
+                      <div class="accordion-content">
+                        <p>Troe is committed to providing unbiased and trustworthy evaluations of artificial intelligence systems. We develop rigorous methodologies to assess the performance, fairness, and societal impact of AI, with a focus on Large Language Models (LLMs). By translating complex technical metrics into understandable insights, we empower businesses, policymakers, and the public to make informed decisions about the development and deployment of AI.</p>
+                      </div>
+                    </div>
+
+                     <div class="accordion-item">
+                        <div class="accordion-header">Methodology <span class="accordion-icon">+</span></div>
+                        <div class="accordion-content">
+                           <p>Troe employs a rigorous and transparent methodology for evaluating AI systems, particularly Large Language Models (LLMs). Our approach involves:</p>
+                             <ul>
+                                 <li><strong>Side-by-Side Comparisons:</strong> Directly comparing the performance of different LLMs on a range of tasks.</li>
+                                 <li><strong>Business-Oriented Metrics:</strong> Translating technical metrics into understandable business outcomes.</li>
+                                 <li><strong>Evolving Test Datasets:</strong> Developing and continuously refining test datasets to ensure comprehensive and relevant evaluations.</li>
+                                 <li><strong>Automated Processes:</strong> Leveraging automation to scale our evaluation efforts and maintain continuous improvement.</li>
+                                </ul>
+                           </div>
+                        </div>
+   
+                       <div class="accordion-item">
+                          <div class="accordion-header">Public Reports <span class="accordion-icon">+</span></div>
+                          <div class="accordion-content">
+                              <p>We publish our findings in publicly available reports, providing valuable insights for researchers, developers, policymakers, and the public.  (Links to sample reports or a placeholder for future reports - coming soon).</p>
+                          </div>
+                       </div>
+                       <div class="accordion-item">
+                           <div class="accordion-header">Private Services <span class="accordion-icon">+</span></div>
+                           <div class="accordion-content">
+                              <p>We offer customized AI evaluation services for organizations seeking in-depth analysis of their AI systems. While we do not disclose the results of private evaluations publicly, we maintain transparency in our methodologies. Revenue generated from these services supports our ongoing research and development efforts.</p>
+                           </div>
+                        </div>
+                   </div>
+                    <p><strong>Funding:</strong> Troe is funded through a combination of donations, grants, and revenue from private evaluation services. We are committed to maintaining our independence and objectivity.</p>
+   
+                   <a href="#contact" class="button">Learn More About Troe's Evaluation Services</a>
+               </div>
+           </div>
+       </section>
+   
+       <section id="get-involved">
+         <div class="container">
+           <h2 class="section-title">Get Involved</h2>
+           <p>Help Shape the Future of AI.  We rely on the support of volunteers, donors, and partners to continue.</p>
+   
+           <div class="two-column">
+             <div>
+               <h3>Volunteer</h3>
+               <p>We are always looking for passionate individuals to join our team of volunteers. Whether you're an AI expert, an educator, a developer, or simply someone who cares about the future of AI, there are many ways to contribute.</p>
+                <p>Opportunities include:</p>
+                <ul>
+                    <li>Curriculum development</li>
+                    <li>Mentoring students</li>
+                    <li>Assisting with events</li>
+                     <li>Contributing to Troe's research</li>
+                    <li>And more!</li>
+                 </ul>
+               <a href="#volunteer-form" class="button">Apply to Volunteer</a>
+             </div>
+   
+             <div>
+                <h3>Donate</h3>
+                 <p>Your generous donations help us expand our programs, reach more people, and ensure a future where AI benefits all of humanity.</p>
+                  <ul>
+                      <li><a href="#donate-money">Donate Money</a></li>
+                      <li><a href="#volunteer-form">Donate Time</a></li>
+                       <li><a href="#contact">Donate Compute Resources</a></li>
+                   </ul>
+                   <p>Your contribution, no matter the size, makes a difference!</p>
+              </div>
+           </div>
+           <div>
+                <h3>Partner</h3>
+                <p>We collaborate with organizations across various sectors to advance our mission. If you're interested in partnering with us, please contact us to explore potential opportunities.</p>
+                 <a href="#contact" class="button">Contact Us to Discuss Partnerships</a>
+             </div>
+            <div id="volunteer-form">
+                 <h3>Volunteer Application</h3>
+               <form action="#" method="post">  <label for="name">Name:</label>
+                   <input type="text" id="name" name="name" required>
+   
+                   <label for="email">Email:</label>
+                   <input type="email" id="email" name="email" required>
+   
+                   <label for="skills">Skills & Interests:</label>
+                   <textarea id="skills" name="skills" rows="4" required></textarea>
+   
+                   <label for="availability">Availability:</label>
+                    <textarea id="availability" name="availability" rows="4" required></textarea>
+                   <button type="submit">Submit Application</button>
+                </form>
+           </div>
+            <div id="donate-money">
+               <h3>Make a Donation</h3>
+               <p>Your financial contribution helps us fulfill our mission.  (Link to secure payment gateway coming soon.)</p>
+                </div>
+         </div>
+       </section>
+   
+        <section id="news">
+            <div class="container">
+                <h2 class="section-title">News & Updates</h2>
+                <div class="news-item">
+                    <h3>AIxponential Launches New Website!</h3>
+                    <p>We're excited to announce the launch of our new website, designed to better connect with our community and share our work. Explore our programs, learn how to get involved, and stay up-to-date on the latest news.</p>
+                   <a href="#">Read More</a>
+                </div>
+                <div class="news-item">
+                     <h3>Seeking Volunteers for AI Summer Camp</h3>
+                     <p>We're looking for passionate volunteers to help with our upcoming AI Summer Camp. If you have experience in AI or education, we encourage you to apply!</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </section>
+   
+       <section id="contact">
+           <div class="container">
+               <h2 class="section-title">Contact Us</h2>
+               <form action="#" method="post">  {/* Replace "#" with your actual form processing script */}
+                   <label for="name">Name:</label>
+                   <input type="text" id="name" name="name" required>
+   
+                   <label for="email">Email:</label>
+                   <input type="email" id="email" name="email" required>
+   
+                   <label for="message">Message:</label>
+                   <textarea id="message" name="message" rows="5" required></textarea>
+   
+                   <button type="submit">Send Message</button>
+               </form>
+               <p>Email: info@aixponential.org</p>
+               {/*  <p>Mailing Address: 168 Orchard Road Wilmington OH 45177</p> */}
+           </div>
+       </section>
+   
+       <footer>
+           <div class="container">
+               <p>&copy; 2025 AIxponential. All rights reserved.</p>
+               <div class="footer-links">
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Terms of Service</a>
+               </div>
+           </div>
+       </footer>
+     <script>
+     // Accordion functionality
+     document.addEventListener('DOMContentLoaded', function() {
+       const accordionHeaders = document.querySelectorAll('.accordion-header');
+   
+       accordionHeaders.forEach(header => {
+         header.addEventListener('click', function() {
+           const item = this.parentElement;
+           item.classList.toggle('active');
+   
+           // Close other open accordion items
+           accordionHeaders.forEach(otherHeader => {
+             if (otherHeader !== header) {
+               otherHeader.parentElement.classList.remove('active');
+             }
+           });
+         });
+       });
+     });
+     </script>
+   
+   </body>
+   </html>
